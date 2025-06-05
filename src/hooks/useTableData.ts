@@ -106,8 +106,12 @@ export const useTableData = <T>({ endpoint }: TableDataProps) => {
         },
       });
       return res.data;
-    } catch (error: any) {
-      throw new Error(error.response?.data?.message || "API Error");
+    } catch (error: unknown) {
+      if (typeof error === "object" && error !== null && "response" in error) {
+        const err = error as { response?: { data?: { message?: string } } };
+        throw new Error(err.response?.data?.message || "API Error");
+      }
+      throw new Error("API Error");
     }
   };
 
