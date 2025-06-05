@@ -121,7 +121,7 @@ export default function TanstackTable<T extends Record<string, string | number>>
         setLoading(false);
       }, loadingTimeout * 1000);
     }
-  }, [useInfiniteScroll, inView, pagination.pageSize, data.length, loadingTimeout]);
+  }, [useInfiniteScroll, inView, pagination.pageSize, data.length, loadingTimeout, paginationOptions, showRecord, pagination]);
 
 
   const table = useReactTable({
@@ -174,7 +174,7 @@ export default function TanstackTable<T extends Record<string, string | number>>
 
       return acc;
     }, {} as { [key: string]: number });
-  }, [table.getState().columnSizing, columnSizing]);
+  }, [table.getState().columnSizing, columnSizing, table]);
 
 
   const sensors = useSensors(

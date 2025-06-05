@@ -6,6 +6,7 @@ type AssignmentStatus = (typeof AssignmentStatusEnum)[number];
 
 // 🔹 Assignment Interface
 export interface IAssignment extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
   title: string;
   description?: string;
   startDate: Date;

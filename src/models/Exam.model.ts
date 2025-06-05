@@ -6,6 +6,7 @@ type ExamType = (typeof ExamTypeEnum)[number];
 
 // 🔹 Exam Interface
 export interface IExam extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
   title: string;
   description?: string;
   examType: ExamType;

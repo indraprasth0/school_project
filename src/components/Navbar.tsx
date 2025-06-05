@@ -14,7 +14,7 @@ const Navbar = () => {
                     width={60}
                     height={60}
                     className="rounded-full shadow-md shadow-black logo"
-                    style={{ width: "auto", height: "auto" }} // ✅ Aspect Ratio Maintain होईल
+                    style={{ width: "auto", height: "auto" }} 
                     priority={true}
                 />
             </div>
@@ -29,7 +29,7 @@ const Navbar = () => {
                             className='bg-transparent border-none outline-none text-p800 placeholder:text-p400 text-xs w-32 md:w-40 lg:w-56 h-full'
                         />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col gap-1">
                         <ThemeModeToggle />
                         <ThemeColorToggle />
                     </div>

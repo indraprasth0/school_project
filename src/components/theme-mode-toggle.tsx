@@ -77,7 +77,7 @@ export function ThemeModeToggle() {
 
   return (
     <div
-      className="w-[40px] h-[40px] bg-white dark:bg-black rounded-md transition-all 
+      className="w-[35px] h-[35px] bg-p800 dark:bg-p500 transition-all rounded-md
       overflow-visible duration-300 ease-in-out hover:bg-black/10 hover:dark:bg-white/10 
       cursor-pointer flex items-center justify-center shadow border-none outline-none"
       onClick={handleThemeChange}
@@ -85,9 +85,9 @@ export function ThemeModeToggle() {
       aria-label="Toggle Theme"
     >
       {appliedTheme === "dark" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem] text-black dark:text-white transition-all rotate-0 scale-100" />
+        <Sun className="h-[1.2rem] w-[1.2rem] text-black dark:text-p950 transition-all rotate-0 scale-100" />
       ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem] text-black dark:text-white transition-all -rotate-90 scale-100" />
+        <Moon className="h-[1.2rem] w-[1.2rem] text-p100 dark:text-white transition-all -rotate-90 scale-100" />
       )}
     </div>
   );

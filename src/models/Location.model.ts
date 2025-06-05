@@ -2,6 +2,7 @@ import { model, models, Schema, Model } from 'mongoose';
 
 // 🔹 Location Interface
 export interface ILocation extends Document {
+  _id?: string; // Optional for new documents
   country: string;
   states: {
     name: string;

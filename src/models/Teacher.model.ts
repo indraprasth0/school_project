@@ -2,6 +2,7 @@ import  { model, models, Schema, Model, Types  } from "mongoose";
 
 // 🔹 Teacher Interface
 export interface ITeacher extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
   user: Types.ObjectId; 
   subjects: Types.ObjectId[];
   lessons: Types.ObjectId[];

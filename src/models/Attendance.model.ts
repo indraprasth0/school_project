@@ -2,6 +2,7 @@ import { model, models, Schema, Model, Types } from 'mongoose';
 
 // 🔹 Attendance Interface
 export interface IAttendance extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
   date: Date;
   present: boolean;
   reason?: string;

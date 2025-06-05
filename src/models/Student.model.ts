@@ -1,6 +1,7 @@
 import { model, models, Schema, Model, Types } from 'mongoose';
 
 export interface IStudent extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
     user: Types.ObjectId; 
     parent: Types.ObjectId;
     class: Types.ObjectId;

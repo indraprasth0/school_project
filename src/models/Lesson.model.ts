@@ -1,6 +1,7 @@
 import { model, models, Schema, Model, Types } from 'mongoose';
 
 export interface ILesson extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
   name: string;
   day: "MONDAY" | "TUESDAY" | "WEDNESDAY" | "THURSDAY" | "FRIDAY";
   startTime: Date;

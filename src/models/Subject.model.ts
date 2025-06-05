@@ -1,6 +1,7 @@
 import { model, models, Schema, Model, Types } from 'mongoose';
 
 export interface ISubject extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
     name: string;
     teachers: Types.ObjectId[];
     lessons: Types.ObjectId[];    

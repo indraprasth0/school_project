@@ -36,7 +36,7 @@ export const register = async (values: z.infer<typeof RegisterSchema>): Promise<
 
         const newUser = new User({
             email,
-            userName: `${email}_${name}`,
+            username: `${email}_${name}`,
             name,
             password: hashPassword,
             role: "user",

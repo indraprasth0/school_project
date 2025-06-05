@@ -2,6 +2,7 @@ import { model, models, Schema, Model, Types } from 'mongoose';
 
 // 🔹 Grade Interface
 export interface IGrade extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
   level: number;
   section?: string; 
   students: Types.ObjectId[];

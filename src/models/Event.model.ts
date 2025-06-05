@@ -2,6 +2,7 @@ import { model, models, Schema, Model, Types } from 'mongoose';
 
 // 🔹 Event Interface
 export interface IEvent {
+  _id?: Types.ObjectId; // Optional for new documents
   title: string;
   description: string;
   startTime: Date;

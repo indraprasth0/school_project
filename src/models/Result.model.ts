@@ -2,6 +2,7 @@ import { model, models, Schema, Model, Types } from 'mongoose';
 
 // 🔹 Result Interface
 export interface IResult extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
   score: number;
   remarks?: string;
   exam?: Types.ObjectId;

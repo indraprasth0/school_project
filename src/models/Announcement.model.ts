@@ -2,6 +2,7 @@ import { model, models, Schema, Model, Types } from 'mongoose';
 
 // 🔹 Announcement Interface
 export interface IAnnouncement extends Document {
+  _id?: Types.ObjectId; 
   title: string;
   description: string;
   date: Date;

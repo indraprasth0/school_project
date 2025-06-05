@@ -1,6 +1,7 @@
 import { model, models, Schema, Model, Types } from 'mongoose';
 
 export interface IClass extends Document {
+  _id?: Types.ObjectId; // Optional for new documents
     name: string;
     capacity: number;
     supervisor?: Types.ObjectId;
